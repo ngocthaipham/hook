@@ -22,6 +22,11 @@ it('renders change value when clicked', () => {
         render(<Button onChange={onChange} />, container);
     })
     const state = document.querySelector(".value");
+    const btn = document.querySelector(".btn");
     expect(state.innerHTML).toBe("Current value : " + `${0}`);
 
+    act(() => {
+        btn.dispatchEvent(new MouseEvent("click", { bubbles: true }));    
+    });
+    expect(state.innerHTML).toBe("Current value : " + `${1}`);
 })

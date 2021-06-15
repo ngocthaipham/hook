@@ -6,7 +6,7 @@ function Button (props) {
 return (
     <div>
         <p className= "value">Current value : {value}</p>
-        <button onClick={() => setValue(value+1)}>Click here!!</button>
+        <button className= "btn" onClick={() => setValue(value+1)}>Click here!!</button>
     </div>
 )
 }
